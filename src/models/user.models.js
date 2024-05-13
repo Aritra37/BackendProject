@@ -1,7 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import jwt from 'json-web-token'
 import bcrypt from 'bcrypt'
-import { use } from "react";
 const userSchema = new Schema(
   {
     username: {
