@@ -40,10 +40,10 @@ router.route("/currentUser").post(verifyJWT, getCurrentUser);
 router.route("/updateAccount").patch(verifyJWT, updateAccountDetails);
 router
   .route("/avatar")
-  .patch(verifyJWT, upload.single("/avatar"), updateUserAvatar);
+  .patch(verifyJWT, upload.single("avatar"), updateUserAvatar);
 router
   .route("/coverImage")
-  .patch(verifyJWT, upload.single("/coverImage"), updateUserCoverImage);
-router.route("/c/:username").get(verifyJWT, getUserChannelProfile);
+  .patch(verifyJWT, upload.single("coverImage"), updateUserCoverImage);
+router.route("/channelName/:username").get(verifyJWT, getUserChannelProfile);
 router.route("/history").get(verifyJWT, getWatchHistory);
 export default router;
